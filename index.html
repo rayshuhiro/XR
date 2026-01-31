@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>AR.js Hiro Marker Card Image</title>
+  <title>AR.js Hiro Marker Card Overlay</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- A-Frame -->
@@ -15,26 +15,28 @@
     embedded
     arjs="sourceType: webcam; debugUIEnabled: false;">
 
-    <!-- アセット -->
+    <!-- assets -->
     <a-assets>
       <img id="cardImage" src="img/card.png">
     </a-assets>
 
-    <!-- Hiroマーカー -->
+    <!-- Hiro marker -->
     <a-marker preset="hiro">
+      <!-- 名刺全体（91×55mm）を覆う画像 -->
       <a-image
         src="#cardImage"
-        position="0 0 0"
-        rotation="-90 0 0"
         width="1"
-        height="0.6">
+        height="0.604"
+        position="0.357 0 0"
+        rotation="-90 0 0">
       </a-image>
     </a-marker>
 
-    <!-- カメラ -->
+    <!-- camera -->
     <a-entity camera></a-entity>
   </a-scene>
 </body>
 </html>
+
 
 
