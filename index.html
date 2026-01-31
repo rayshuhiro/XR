@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>AR.js Hiro Marker Demo</title>
+  <title>AR.js Hiro Marker Card Image</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- A-Frame -->
@@ -15,16 +15,20 @@
     embedded
     arjs="sourceType: webcam; debugUIEnabled: false;">
 
+    <!-- アセット -->
+    <a-assets>
+      <img id="cardImage" src="img/card.png">
+    </a-assets>
+
     <!-- Hiroマーカー -->
     <a-marker preset="hiro">
-      <a-box
-        position="0 0.5 0"
-        rotation="0 45 0"
+      <a-image
+        src="#cardImage"
+        position="0 0 0"
+        rotation="-90 0 0"
         width="1"
-        height="1"
-        depth="1"
-        color="#4CC3D9">
-      </a-box>
+        height="0.6">
+      </a-image>
     </a-marker>
 
     <!-- カメラ -->
@@ -32,4 +36,5 @@
   </a-scene>
 </body>
 </html>
+
 
