@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>A-Frame a-box Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- カメラ -->
+    <a-entity position="0 1.6 3">
+      <a-camera></a-camera>
+    </a-entity>
+
+    <!-- ボックス -->
+    <a-box
+      position="0 1 -3"
+      rotation="0 45 0"
+      width="1"
+      height="1"
+      depth="1"
+      color="#4CC3D9">
+    </a-box>
+
+    <!-- ライト -->
+    <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+    <a-light type="directional" position="1 3 2" intensity="0.8"></a-light>
+
+    <!-- 地面 -->
+    <a-plane
+      rotation="-90 0 0"
+      width="10"
+      height="10"
+      color="#7BC8A4">
+    </a-plane>
+
+    <!-- 空 -->
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+</body>
+</html>
 
